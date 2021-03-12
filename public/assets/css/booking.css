@@ -1,0 +1,11 @@
+.booking{
+    list-style-type: none;
+}
+
+.booking li{
+    margin: 0.5rem;
+}
+
+.booking li a{
+    background-color: azure;
+}
