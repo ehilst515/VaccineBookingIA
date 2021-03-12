@@ -1,89 +1,149 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/8.3.0/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/8.3.0/firebase-auth.js"></script>
-    <script defer src="/__/firebase/8.3.0/firebase-database.js"></script>
-    <script defer src="/__/firebase/8.3.0/firebase-firestore.js"></script>
-    <script defer src="/__/firebase/8.3.0/firebase-functions.js"></script>
-    <script defer src="/__/firebase/8.3.0/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/8.3.0/firebase-storage.js"></script>
-    <script defer src="/__/firebase/8.3.0/firebase-analytics.js"></script>
-    <script defer src="/__/firebase/8.3.0/firebase-remote-config.js"></script>
-    <script defer src="/__/firebase/8.3.0/firebase-performance.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+<head>
+  <title>Vaccine Booking IA</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <meta name="description"
+    content="A simple to use website to book a vaccine appointment for people without Twitter." />
+  <meta name="keywords" content="Vaccine, Iowa, vaccination, covid-19" />
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/booking.css" />
+
+  <script defer src="/__/firebase/8.3.0/firebase-app.js"></script>
+  <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+</head>
+
+<body class="is-preload">
+
+  <!-- Wrapper -->
+  <div id="wrapper">
+
+    <!-- Intro -->
+    <section class="intro">
+      <header>
+        <h1>Vaccine Booking</h1>
+        <ul class="booking">
+          <li><a
+              href="https://www.cvs.com/immunizations/covid-19-vaccine#acc_link_content_section_box_251541438_boxpar_accordion_910919113_1"
+              class="button large" style="background-color: azure;">CVS</a></li>
+          <li><a href="https://www.hy-vee.com/my-pharmacy/covid-vaccine-consent" class="button large"
+              style="background-color: azure;">Hy-Vee</a></li>
+          <li><a href="https://www.walgreens.com/findcare/vaccination/covid-19/location-screening" class="button large"
+              style="background-color: azure;">Walgreens</a></li>
+          <li><a href="https://www.walgreens.com/findcare/vaccination/covid-19?ban=covid_vaccine_landing_schedule"
+              class="button large" style="background-color: azure;">Walgreens Mobile</a></li>
+        </ul>
+
+        <ul class="actions">
+
+          <li><a href="#first" class="arrow scrolly"><span class="label">Next</span></a></li>
+        </ul>
+      </header>
+      <div class="content">
+        <span class="image fill" data-position="center"><a class="twitter-timeline" data-height="760" data-theme="light"
+            href="https://twitter.com/IAVaccineAlerts?ref_src=twsrc%5Etfw">Tweets by
+            IAVaccineAlerts</a>
+          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </span>
+      </div>
+    </section>
+
+    <!-- Section -->
+    <section id="first">
+      <header>
+        <h2>Tips</h2>
+      </header>
+      <div class="content">
+        <p><strong>Appointments will be filled very quickly</strong>, so try to get through the booking process as fast
+          as possible.
+          Specifically with Hy-Vee, the form can be filled all the way up to submission, where you can then change your
+          appointment location. Fill out the form even if you think it's too late, then return to the location setter
+          and keep an eye out for newly available Hy-Vee appointments.</p>
+        <span class="image main"><img src="images/HyVeeLocations.PNG" alt="Hy-Vee Location Search" /></span>
+      </div>
+    </section>
+
+    <!-- Section -->
+    <section>
+      <header>
+        <h2>Open Source</h2>
+      </header>
+      <div class="content">
+        <p><strong>This website is open source</strong> and hosted on Firebase.</p>
+        <footer>
+          <h3>Links</h3>
+          <ul class="icons">
+            <li><a href="https://twitter.com/IAVaccineAlerts" class="icon brands fa-twitter"><span
+                  class="label">Twitter</span></a></li>
+            <li><a href="https://www.linkedin.com/in/ehilst/" class="icon brands fa-linkedin-in"><span
+                  class="label">LinkedIn</span></a>
+            </li>
+            <li><a href="https://github.com/ehilst515/VaccineBookingIA" class="icon brands fa-github"><span
+                  class="label">GitHub</span></a></li>
+          </ul>
+          </li>
+          </ul>
+        </footer>
+    </section>
+
+    <!-- Copyright -->
+    <div class="copyright">&copy; Enrique Hilst. All rights reserved. Design: <a href="https://html5up.net">HTML5
+        UP</a>.
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+  </div>
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.scrolly.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- Firebase -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const loadEl = document.querySelector('#load');
+      // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+      // // The Firebase SDK is initialized and available here!
+      //
+      // firebase.auth().onAuthStateChanged(user => { });
+      // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+      // firebase.firestore().doc('/foo/bar').get().then(() => { });
+      // firebase.functions().httpsCallable('yourFunction')().then(() => { });
+      // firebase.messaging().requestPermission().then(() => { });
+      // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+      // firebase.analytics(); // call to activate
+      // firebase.analytics().logEvent('tutorial_completed');
+      // firebase.performance(); // call to activate
+      //
+      // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+      try {
+        let app = firebase.app();
+        let features = [
+          'auth',
+          'database',
+          'firestore',
+          'functions',
+          'messaging',
+          'storage',
+          'analytics',
+          'remoteConfig',
+          'performance',
+        ].filter(feature => typeof app[feature] === 'function');
+        loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+      } catch (e) {
+        console.error(e);
+        loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+      }
+    });
+  </script>
+</body>
+
 </html>
